@@ -1,0 +1,34 @@
+First search/replace block to remove duplicate imports:
+
+<<<<<<< SEARCH
+import React, { useState } from 'react';
+import { BookOpen, Clock, Target, TrendingUp, Calendar, Heart } from 'lucide-react';
+import { User } from '../types/User';
+
+interface DashboardProps {
+  currentUser: User | null;
+}
+
+import React, { useState } from 'react';
+import { BookOpen, Clock, Target, TrendingUp, Calendar, Heart } from 'lucide-react';
+import { User } from '../types/User';
+
+interface DashboardProps {
+  currentUser: User | null;
+}
+=======
+import React, { useState } from 'react';
+import { BookOpen, Clock, Target, TrendingUp, Calendar, Heart } from 'lucide-react';
+import { User } from '../types/User';
+
+interface DashboardProps {
+  currentUser: User | null;
+}
+>>>>>>> REPLACE
+
+Second search/replace block to update "Today's Focus" hardcoded value:
+
+<<<<<<< SEARCH
+<p className="text-2xl font-bold text-purple-500">2.5 hrs</p>
+=======
+<p className="text-2xl font-bold text-purple-500">0 hrs</p>

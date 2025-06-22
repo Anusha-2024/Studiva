@@ -1,0 +1,178 @@
+<<<<<<< import React, { useState, useEffect } from 'react';
+import { Plus, Heart, Star, Target, Upload, Grid } from 'lucide-react';
+import { User } from '../types/User';
+=======
+
+interface BoardItem {
+  id: number;
+  type: 'image' | 'text';
+  src?: string;
+  title?: string;
+  content?: string;
+  color?: string;
+}
+
+interface Board {
+  id: number;
+  title: string;
+  userId: string;
+  items: BoardItem[];
+}
+
+import React, { useState, useEffect } from 'react';
+import { Plus, Heart, Star, Target, Upload, Grid } from 'lucide-react';
+import { User } from '../types/User';
+>>>>>>> import React, { useState, useEffect } from 'react';
+
+<<<<<<< const VisionBoard: React.FC<VisionBoardProps> = ({ currentUser }) => {
+  const [boards, setBoards] = useState(() => {
+    const savedBoards = sessionStorage.getItem('visionBoards');
+    if (savedBoards) {
+      try {
+        return JSON.parse(savedBoards);
+      } catch {
+        return [];
+      }
+    }
+    return [
+      {
+        id: 1,
+        title: 'Academic Goals 2025',
+        userId: currentUser?.id || '1',
+        items: [
+          { id: 1, type: 'image', src: 'https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Graduate with Honors' },
+          { id: 2, type: 'text', content: 'Get into MIT', color: 'bg-pink-200' },
+          { id: 3, type: 'image', src: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Research Project' },
+          { id: 4, type: 'text', content: 'GPA 4.0', color: 'bg-purple-200' },
+        ]
+      },
+      {
+        id: 2,
+        title: 'Dream Career',
+        userId: currentUser?.id || '1',
+        items: [
+          { id: 5, type: 'image', src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Tech Startup' },
+          { id: 6, type: 'text', content: 'Software Engineer at Google', color: 'bg-blue-200' },
+          { id: 7, type: 'image', src: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Innovation' },
+        ]
+      }
+    ];
+  });
+=======
+const VisionBoard: React.FC<VisionBoardProps> = ({ currentUser }) => {
+  const [boards, setBoards] = useState<Board[]>(() => {
+    const savedBoards = sessionStorage.getItem('visionBoards');
+    if (savedBoards) {
+      try {
+        return JSON.parse(savedBoards);
+      } catch {
+        return [];
+      }
+    }
+    return [
+      {
+        id: 1,
+        title: 'Academic Goals 2025',
+        userId: currentUser?.id || '1',
+        items: [
+          { id: 1, type: 'image', src: 'https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Graduate with Honors' },
+          { id: 2, type: 'text', content: 'Get into MIT', color: 'bg-pink-200' },
+          { id: 3, type: 'image', src: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Research Project' },
+          { id: 4, type: 'text', content: 'GPA 4.0', color: 'bg-purple-200' },
+        ]
+      },
+      {
+        id: 2,
+        title: 'Dream Career',
+        userId: currentUser?.id || '1',
+        items: [
+          { id: 5, type: 'image', src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Tech Startup' },
+          { id: 6, type: 'text', content: 'Software Engineer at Google', color: 'bg-blue-200' },
+          { id: 7, type: 'image', src: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300', title: 'Innovation' },
+        ]
+      }
+    ];
+  });
+>>>>>>> const VisionBoard: React.FC<VisionBoardProps> = ({ currentUser }) => {
+
+<<<<<<< const userBoards = boards.filter(board => board.userId === (currentUser?.id || '1'));
+  const [selectedBoard, setSelectedBoard] = useState(() => userBoards[0] || boards[0] || null);
+  const [isCreatingBoard, setIsCreatingBoard] = useState(false);
+
+  useEffect(() => {
+    sessionStorage.setItem('visionBoards', JSON.stringify(boards));
+  }, [boards]);
+
+  const updateBoardItems = (updatedItems: any[]) => {
+    const updatedBoards = boards.map(board =>
+      board.id === selectedBoard?.id
+        ? { ...board, items: updatedItems }
+        : board
+    );
+    setBoards(updatedBoards);
+    setSelectedBoard(updatedBoards.find(b => b.id === selectedBoard?.id) || null);
+  };
+=======
+const userBoards = boards.filter(board => board.userId === (currentUser?.id || '1'));
+  const [selectedBoard, setSelectedBoard] = useState<Board | null>(() => userBoards[0] || boards[0] || null);
+  const [isCreatingBoard, setIsCreatingBoard] = useState(false);
+
+  useEffect(() => {
+    sessionStorage.setItem('visionBoards', JSON.stringify(boards));
+  }, [boards]);
+
+  const updateBoardItems = (updatedItems: BoardItem[]) => {
+    const updatedBoards = boards.map(board =>
+      board.id === selectedBoard?.id
+        ? { ...board, items: updatedItems }
+        : board
+    );
+    setBoards(updatedBoards);
+    setSelectedBoard(updatedBoards.find(b => b.id === selectedBoard?.id) || null);
+  };
+>>>>>>> const userBoards = boards.filter(board => board.userId === (currentUser?.id || '1'));
+
+<<<<<<< const addImage = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = (e: any) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const newItem = {
+          id: Date.now(),
+          type: 'image' as const,
+          src: reader.result as string,
+          title: file.name,
+        };
+        updateBoardItems([...(selectedBoard?.items || []), newItem]);
+      };
+      reader.readAsDataURL(file);
+    };
+    input.click();
+  };
+=======
+const addImage = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const newItem: BoardItem = {
+          id: Date.now(),
+          type: 'image',
+          src: reader.result as string,
+          title: file.name,
+        };
+        updateBoardItems([...(selectedBoard?.items || []), newItem]);
+      };
+      reader.readAsDataURL(file);
+    };
+    input.click();
+  };
+>>>>>>> const addImage = () => {

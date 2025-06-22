@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles to use the --primary-color CSS variable for theme colors */
+
+:root {
+  --primary-color: #ec4899; /* default fallback color */
+}
+
+/* Example usage for buttons */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+/* Example usage for links */
+a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a83279; /* slightly darker shade for hover */
+}
+
+/* Example usage for borders */
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+/* Example usage for text */
+.text-primary {
+  color: var(--primary-color);
+}
