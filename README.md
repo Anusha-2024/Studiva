@@ -52,8 +52,7 @@ npm install
 ```bash
 npm run dev
 ```
-- Open your browser at http://localhost:5173 to explore Studiva.
-- 
+Open your browser at http://localhost:5173 to explore Studiva.
 ### 💡 Inspiration
 - Studiva was born from a simple idea: studying should feel rewarding, not robotic. With smooth UI, subtle animations, and motivation-friendly design, it’s more than just a tracker — it’s your stylish study companion.
   
