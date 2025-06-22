@@ -43,3 +43,19 @@ Crafted with the power of **React**, **TypeScript**, and **Vite**, styled effort
 ```bash
 git clone https://github.com/your-username/studiva.git
 cd studiva
+```
+### 2. 📦 Install dependencies
+```bash
+npm install
+```
+### 3. 💻 Start the development server
+```bash
+npm run dev
+```
+- Open your browser at http://localhost:5173 to explore Studiva.
+- 
+### 💡 Inspiration
+- Studiva was born from a simple idea: studying should feel rewarding, not robotic. With smooth UI, subtle animations, and motivation-friendly design, it’s more than just a tracker — it’s your stylish study companion.
+  
+
+Built with ❤️ for learners who dare to be different.
