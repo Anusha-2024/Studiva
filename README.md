@@ -60,7 +60,7 @@ Open your browser at http://localhost:5173 to explore Studiva.
 - This project is licensed under the MIT License.
   
 ### 🙋‍♀️ Author
-Made with 💖 by Anusha
-📧 Email: krianusha09@gmail.com
+- Made with 💖 by Anusha
+- 📧 Email: krianusha09@gmail.com
 
-Built with ❤️ for learners who dare to be different.
+- Built for learners who dare to be different.
