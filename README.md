@@ -55,9 +55,12 @@ npm run dev
 Open your browser at http://localhost:5173 to explore Studiva.
 ### 💡 Inspiration
 - Studiva was born from a simple idea: studying should feel rewarding, not robotic. With smooth UI, subtle animations, and motivation-friendly design, it’s more than just a tracker — it’s your stylish study companion.
+
+### 🤝 Contributing
+Contributions are welcome!
   
 ###  📝 License
-- This project is licensed under the MIT License.
+This project is licensed under the MIT License.
   
 ### 🙋‍♀️ Author
 - Made with 💖 by Anusha
