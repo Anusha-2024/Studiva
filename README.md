@@ -18,6 +18,12 @@ Crafted with the power of **React**, **TypeScript**, and **Vite**, styled effort
 
 ---
 
+### 🖼️ Home Page
+![Home Page]()
+
+### 🏠 Calender Page
+![Calender Page]()
+
 ## 🧰 Technologies Used
 
 - [React](https://reactjs.org/)
