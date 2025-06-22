@@ -19,10 +19,10 @@ Crafted with the power of **React**, **TypeScript**, and **Vite**, styled effort
 ---
 
 ### 🖼️ Home Page
-![Home Page]()
+![Home Page](https://github.com/Anusha-2024/Studiva/raw/refs/heads/main/Screen%20Recording%202025-06-23%20000104.mp4)
 
 ### 🏠 Calender Page
-![Calender Page]()
+![Calender Page](https://github.com/Anusha-2024/Studiva/blob/main/Screenshot%202025-06-23%20001245.png?raw=true)
 
 ## 🧰 Technologies Used
 
