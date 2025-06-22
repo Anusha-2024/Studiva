@@ -36,7 +36,7 @@ Crafted with the power of **React**, **TypeScript**, and **Vite**, styled effort
 
 ---
 
-## 🛠 Getting Started
+## 🛠 Getting Started-
 
 ### 1. 📥 Clone the repository
 
@@ -53,16 +53,16 @@ npm install
 npm run dev
 ```
 Open your browser at http://localhost:5173 to explore Studiva.
-### 💡 Inspiration
+### 💡 Inspiration-
 Studiva was born from a simple idea: studying should feel rewarding, not robotic. With smooth UI, subtle animations, and motivation-friendly design, it’s more than just a tracker — it’s your stylish study companion.
 
-### 🤝 Contributing
+### 🤝 Contributing-
 Contributions are welcome!
   
 ###  📝 License
 This project is licensed under the MIT License.
   
-### 🙋‍♀️ Author
+### 🙋‍♀️ Author-
  Made with 💖 by Anusha
  
  📧 Email: krianusha09@gmail.com
